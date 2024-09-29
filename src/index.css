@@ -1,0 +1,20 @@
+:root {
+  --bg-color: #F5F7FB;
+  --color: #293264;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  margin: 0;
+  position: relative;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Karla';
+  color: var(--color);
+}
+p {
+  font-family: 'Inter'
+}
