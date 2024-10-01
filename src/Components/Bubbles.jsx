@@ -1,19 +1,18 @@
 /* eslint-disable */
 import './Bubbles.css'
 
-const Bubbles = (props) => {
-
+const Bubbles = ({ text, positionStyles, styles, animationDuration, animationName }) => {
     return (
         <div
-            className={`bubble`}
+            className="bubble"
             style={{
-                ...props.positionStyles,
-                ...props.styles,
-                animationDuration: props.animationDuration,
-                animationName: props.animationName,
+                ...positionStyles,
+                ...styles,
+                animationDuration,
+                animationName,
             }}
         >
-            {props.text}
+            {text}
         </div>
     );
 };
