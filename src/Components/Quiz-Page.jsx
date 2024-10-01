@@ -4,6 +4,7 @@ import './Quiz-Page.css';
 import { useEffect, useState } from 'react';
 import Bubbles from './Bubbles'
 import createBubblesData from './bubblesData'
+import './Spinner.css'
 
 const QuizPage = ({ onFinish }) => {
     const [questions, setQuestions] = useState([]);
@@ -57,7 +58,11 @@ const QuizPage = ({ onFinish }) => {
     };
 
     if (loading) {
-        return <div>Loading questions...</div>;
+        return (
+            <div className="loading-container">
+                <div className='spinner'>Loading questions...</div>;
+            </div>
+        )
     }
 
     return (
