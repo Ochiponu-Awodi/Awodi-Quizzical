@@ -1,12 +1,12 @@
 /* eslint-disable */
 
+import React, { useEffect, useState } from 'react';
 import './Quiz-Page.css';
-import { useEffect, useState } from 'react';
-import Bubbles from './Bubbles'
-import createBubblesData from './bubblesData'
-import './Spinner.css'
+import Bubbles from './Bubbles';
+import createBubblesData from './bubblesData';
+import './Spinner.css';
 
-const QuizPage = ({ onFinish }) => {
+function QuizPage ({ onFinish }) {
     const [questions, setQuestions] = useState([]);
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [loading, setLoading] = useState(true);
@@ -48,7 +48,7 @@ const QuizPage = ({ onFinish }) => {
         const score = questions.reduce((total, question, index) => {
             return total + (selectedAnswers[index] === question.correctAnswer ? 1 : 0);
         }, 0);
-        onFinish(score);
+        onFinish(score, questions, selectedAnswers);
     };
 
     const decodeHtml = (html) => {
@@ -60,37 +60,35 @@ const QuizPage = ({ onFinish }) => {
     if (loading) {
         return (
             <div className="loading-container">
-                <div className='spinner'>Loading questions...</div>;
+                <div className='spinner'>Loading questions...</div>
             </div>
-        )
+        );
     }
 
     return (
-        <>
         <div className='container'>
-        <div className="quiz-page">
-            {questions.map((currentQuestion, index) => (
-                <div key={index} className="question-container">
-                    <h2>{currentQuestion.question}</h2>
-                    <div className="answers">
-                        {currentQuestion.answers.map((answer, answerIndex) => (
+            <div className="quiz-page">
+                {questions.map((currentQuestion, index) => (
+                    <div key={index} className="question-container">
+                        <h2>{currentQuestion.question}</h2>
+                        <div className="answers">
+                            {currentQuestion.answers.map((answer, answerIndex) => (
                                 <button
-                                key={answerIndex}
-                                className={`answer-button ${selectedAnswers[index] === answer ? 'selected' : ''}`}
-                                onClick={() => handleAnswerSelect(index, answer)}
-                            >
-                                {answer}
-                            </button>
-                        ))}
+                                    key={answerIndex}
+                                    className={`answer-button ${selectedAnswers[index] === answer ? 'selected' : ''}`}
+                                    onClick={() => handleAnswerSelect(index, answer)}
+                                >
+                                    {answer}
+                                </button>
+                            ))}
+                        </div>
+                        <hr />
                     </div>
-                    <hr />
-                </div>
-            ))}
-        </div>
-        <button onClick={handleSubmit} disabled={Object.keys(selectedAnswers).length !== questions.length} className='submit'>
-        Submit
-    </button>
-    </div>
+                ))}
+            </div>
+            <button onClick={handleSubmit} disabled={Object.keys(selectedAnswers).length !== questions.length} className='submit'>
+                Submit
+            </button>
             {bubblesData.map((bubble) => (
                 <Bubbles 
                     key={bubble.id} 
@@ -101,7 +99,7 @@ const QuizPage = ({ onFinish }) => {
                     animationDuration={bubble.animationDuration}
                 />
             ))}
-    </>
+        </div>
     );
 };
 
