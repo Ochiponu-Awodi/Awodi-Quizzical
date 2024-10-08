@@ -18,13 +18,13 @@
 
 @media only screen and (max-width: 480px) {
     .answers {
-      font-size: 20vw !important;
+      font-size: 40vw !important;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .answers {
-      font-size: 20vw !important;
+      font-size: 40vw !important;
     }
 }
 
