@@ -16,6 +16,18 @@
     flex-direction: column;
 }
 
+@media only screen and (max-width: 480px) {
+    .question {
+      font-size: 10vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .question {
+      font-size: 10vw;
+    }
+}
+
 .answer-button {
     padding: 5% 10%;
     margin: 5px;
