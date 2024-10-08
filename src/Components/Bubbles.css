@@ -16,17 +16,17 @@
 
 @media only screen and (max-width: 480px) {
     .bubble {
-      width: 30vw;
-      height: 30vw;
-      font-size: 4vw;
+      width: 30vw !important;
+      height: 30vw !important;
+      font-size: 4vw !important;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .bubble {
-      width: 30vw;
-      height: 30vw;
-      font-size: 4vw;
+      width: 30vw !important;
+      height: 30vw !important;
+      font-size: 4vw !important;
     }
 }
 
