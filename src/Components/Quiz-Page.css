@@ -19,12 +19,16 @@
 @media only screen and (max-width: 480px) {
     .answers {
       font-size: 40vw !important;
+      line-height: normal !important;
+      padding: 0;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .answers {
       font-size: 40vw !important;
+      line-height: normal !important;
+      padding: 0 !important;
     }
 }
 
