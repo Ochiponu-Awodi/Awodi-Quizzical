@@ -18,13 +18,13 @@
 
 @media only screen and (max-width: 480px) {
     .question {
-      font-size: 10vw;
+      font-size: 10vw !important;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .question {
-      font-size: 10vw;
+      font-size: 10vw !important;
     }
 }
 
