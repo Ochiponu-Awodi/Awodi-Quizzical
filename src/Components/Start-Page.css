@@ -19,8 +19,8 @@ h1 {
     }
 
     .start-button {
-        font-size: 5vw;
-        padding: 3% 3.5%;
+        font-size: 5vw !important;
+        padding: 3% 3.5% !important;
     }
 }
 
@@ -30,8 +30,8 @@ h1 {
     }
 
     .start-button {
-        font-size: 5vw;
-        padding: 3% 3.5%;
+        font-size: 5vw !important;
+        padding: 3% 3.5% !important;
     }
 }
 
