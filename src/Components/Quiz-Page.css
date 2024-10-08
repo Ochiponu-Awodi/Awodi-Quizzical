@@ -17,14 +17,14 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .question {
-      font-size: 40vw !important;
+    .answers {
+      font-size: 20vw !important;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .question {
-      font-size: 40vw !important;
+    .answers {
+      font-size: 20vw !important;
     }
 }
 

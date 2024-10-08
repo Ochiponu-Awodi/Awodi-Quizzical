@@ -70,7 +70,7 @@ function QuizPage ({ onFinish }) {
             <div className="quiz-page">
                 {questions.map((currentQuestion, index) => (
                     <div key={index} className="question-container">
-                        <h2 className='question'>{currentQuestion.question}</h2>
+                        <h2>{currentQuestion.question}</h2>
                         <div className="answers">
                             {currentQuestion.answers.map((answer, answerIndex) => (
                                 <button
